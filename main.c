@@ -6,16 +6,19 @@
 int main(int argc, char *argv[]) {
 	
 	int i;
-	int grade[5] = {1,2,3,4,4};
-	int score[5] = {1,2,3,4,5};
+	int grade[5];
+	int sum=0; 
 	
 	for(i=0;i<5;i++)
 	{
-		if (grade[i] != score[i])
-		{
-			printf("%i is different\n", i);
-		}
+		printf("put grade %i:", i);
+		scanf("%d", &grade[i]);
 	}
+	for(i=0;i<5;i++)
+	{
+		sum += grade[i];
+	}
+	printf("average[%d] = %d\n", i, sum/5);
 	
 	return 0;
 }
